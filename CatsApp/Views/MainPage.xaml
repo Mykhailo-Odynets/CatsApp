@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:CatsApp.Models"
+             x:Class="CatsApp.Views.MainPage"
+             Title="Cat Paradise">
+
+    <CollectionView>
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type model:Cat}">
+                <model:Cat id="fw332" url="https://cdn2.thecatapi.com/images/alj.jpg" height="123" width="562"/>
+                <model:Cat id="2478" url="https://cdn2.thecatapi.com/images/coq.jpg" height="734" width="348"/>
+                <model:Cat id="h43" url="https://cdn2.thecatapi.com/images/ed6.jpg" height="2965" width="294"/>
+                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
+                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
+                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
+                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
+                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
+                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
+                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
+            </x:Array>
+        </CollectionView.ItemsSource>
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:Cat">
+                <HorizontalStackLayout Padding="10" Spacing="20">
+                    <Image Source="{Binding url}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill"/>
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="{Binding id}" FontSize="24" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
