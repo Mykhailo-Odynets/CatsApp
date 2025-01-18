@@ -22,7 +22,7 @@ namespace CatsApp.Data
                 return cats;
 
             string api_key = "live_omdMPf8o2Xg7RLPKPFw1ppuihuQy663vVmbNnR2j7a58qDqC4PWm6DRtBV8u0eyh";
-            int data_count = 10;
+            int data_count = 20;
             string url = $"https://api.thecatapi.com/v1/images/search?limit={data_count}&api_key={api_key}";
 
             var response = await client.GetAsync(url);

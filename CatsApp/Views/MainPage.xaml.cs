@@ -25,4 +25,9 @@ public partial class MainPage : ContentPage
             { "SelectedCat", selectedCat }
         });
     }
+
+    private void loadCats_Clicked(object sender, EventArgs e)
+    {
+        BindingContext = new MainViewModel();
+    }
 }

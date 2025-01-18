@@ -5,7 +5,7 @@
              x:Class="CatsApp.Views.DetailsPage"
              Title="Cat Details">
 
-    <StackLayout Padding="10">
+    <!--<StackLayout Padding="10">
         <Image Source="{Binding SelectedCat.url}" HeightRequest="300" Aspect="AspectFill" />
         <Label Text="ID:" FontSize="Medium" />
         <Label Text="{Binding SelectedCat.id}" FontSize="Large" />
@@ -13,6 +13,104 @@
         <Label Text="{Binding SelectedCat.width}" FontSize="Large" />
         <Label Text="Height:" FontSize="Medium" />
         <Label Text="{Binding SelectedCat.height}" FontSize="Large" />
-    </StackLayout>
-    
+    </StackLayout>-->
+
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+            <Image Source="{Binding SelectedCat.url}" HeightRequest="300" Aspect="AspectFill" />
+            <Grid ColumnDefinitions="Auto, *" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Text="ID:" Grid.Column="0" Grid.Row="0" />
+                <Label Text="{Binding SelectedCat.id}" Grid.Column="1" Grid.Row="0" />
+
+                <Label Text="Width:" Grid.Column="0" Grid.Row="1" />
+                <Label Text="{Binding SelectedCat.width}" Grid.Column="1" Grid.Row="1" />
+
+                <Label Text="Height:" Grid.Column="0" Grid.Row="2" />
+                <Label Text="{Binding SelectedCat.height}" Grid.Column="1" Grid.Row="2" />
+
+                <Label Text="Breed:" Grid.Column="0" Grid.Row="3" />
+                <Label Text="{Binding SelectedCat.breed.name}" Grid.Column="1" Grid.Row="3" />
+
+                <Label Text="Breed Description:" Grid.Column="0" Grid.Row="4" />
+                <Label Text="{Binding SelectedCat.breed.description}" Grid.Column="1" Grid.Row="4" />
+
+                <Label Text="Weight:" Grid.Column="0" Grid.Row="5" />
+                <Label Text="{Binding SelectedCat.breed.weight.metric}" Grid.Column="1" Grid.Row="5" />
+
+                <Label Text="Temperament:" Grid.Column="0" Grid.Row="6" />
+                <Label Text="{Binding SelectedCat.breed.temperament}" Grid.Column="1" Grid.Row="6" />
+
+                <Label Text="Origin:" Grid.Column="0" Grid.Row="7" />
+                <Label Text="{Binding SelectedCat.breed.origin}" Grid.Column="1" Grid.Row="7" />
+
+                <Label Text="Life Span:" Grid.Column="0" Grid.Row="8" />
+                <Label Text="{Binding SelectedCat.breed.life_span}" Grid.Column="1" Grid.Row="8" />
+
+                <Label Text="Adaptability:" Grid.Column="0" Grid.Row="9" />
+                <Label Text="{Binding SelectedCat.breed.adaptability}" Grid.Column="1" Grid.Row="9" />
+
+                <Label Text="Affection Level:" Grid.Column="0" Grid.Row="10" />
+                <Label Text="{Binding SelectedCat.breed.affection_level}" Grid.Column="1" Grid.Row="10" />
+
+                <Label Text="Child Friendly:" Grid.Column="0" Grid.Row="11" />
+                <Label Text="{Binding SelectedCat.breed.child_friendly}" Grid.Column="1" Grid.Row="11" />
+
+                <Label Text="Dog Friendly:" Grid.Column="0" Grid.Row="12" />
+                <Label Text="{Binding SelectedCat.breed.dog_friendly}" Grid.Column="1" Grid.Row="12" />
+
+                <Label Text="Energy Level:" Grid.Column="0" Grid.Row="13" />
+                <Label Text="{Binding SelectedCat.breed.energy_level}" Grid.Column="1" Grid.Row="13" />
+
+                <Label Text="Grooming:" Grid.Column="0" Grid.Row="14" />
+                <Label Text="{Binding SelectedCat.breed.grooming}" Grid.Column="1" Grid.Row="14" />
+
+                <Label Text="Health Issues:" Grid.Column="0" Grid.Row="15" />
+                <Label Text="{Binding SelectedCat.breed.health_issues}" Grid.Column="1" Grid.Row="15" />
+
+                <Label Text="Intelligence:" Grid.Column="0" Grid.Row="16" />
+                <Label Text="{Binding SelectedCat.breed.intelligence}" Grid.Column="1" Grid.Row="16" />
+
+                <Label Text="Shedding Level:" Grid.Column="0" Grid.Row="17" />
+                <Label Text="{Binding SelectedCat.breed.shedding_level}" Grid.Column="1" Grid.Row="17" />
+
+                <Label Text="Social Needs:" Grid.Column="0" Grid.Row="18" />
+                <Label Text="{Binding SelectedCat.breed.social_needs}" Grid.Column="1" Grid.Row="18" />
+
+                <Label Text="Stranger Friendly:" Grid.Column="0" Grid.Row="19" />
+                <Label Text="{Binding SelectedCat.breed.stranger_friendly}" Grid.Column="1" Grid.Row="19" />
+
+                <Label Text="Vocalisation:" Grid.Column="0" Grid.Row="20" />
+                <Label Text="{Binding SelectedCat.breed.vocalisation}" Grid.Column="1" Grid.Row="20" />
+
+                <Label Text="Category:" Grid.Column="0" Grid.Row="21" />
+                <Label Text="{Binding SelectedCat.category.name}" Grid.Column="1" Grid.Row="21" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>

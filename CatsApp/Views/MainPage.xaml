@@ -6,6 +6,7 @@
              Title="Cat Paradise">
 
     <StackLayout>
+        <Button x:Name="loadCats" Text="Load Cats" Clicked="loadCats_Clicked" Margin="10" />
         <ListView x:Name="catsList" 
                   ItemsSource="{Binding Cats}"
                   Background="Transparent"

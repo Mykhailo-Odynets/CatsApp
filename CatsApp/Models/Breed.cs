@@ -9,7 +9,7 @@ namespace CatsApp.Models
 {
     public class Breed
     {
-        public Weight weight { get; set; }
+        public Weight? weight { get; set; }
         public string? id { get; set; }
         public string? name { get; set; }
         public string? cfa_url { get; set; }
