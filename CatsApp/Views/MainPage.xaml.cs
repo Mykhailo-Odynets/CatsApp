@@ -1,4 +1,5 @@
 using CatsApp.ViewModels;
+using CatsApp.Models;
 
 namespace CatsApp.Views;
 public partial class MainPage : ContentPage
@@ -14,13 +15,14 @@ public partial class MainPage : ContentPage
         catsList.SelectedItem = null;
     }
 
-    private void catsList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    private async void catsList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(DetailsPage));
-    }
+        if (catsList.SelectedItem == null) return;
 
-    //  private void btnDetailsPage_Clicked(object sender, EventArgs e)
-    //  {
-    //Shell.Current.GoToAsync(nameof(DetailsPage));
-    //  }
+        var selectedCat = (Cat)catsList.SelectedItem;
+        await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
+        {
+            { "SelectedCat", selectedCat }
+        });
+    }
 }

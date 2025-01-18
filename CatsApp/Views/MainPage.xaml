@@ -5,61 +5,24 @@
              x:Class="CatsApp.Views.MainPage"
              Title="Cat Paradise">
 
-    <!--<StackLayout>
-        <ListView ItemsSource="{Binding Cats}">
+    <StackLayout>
+        <ListView x:Name="catsList" 
+                  ItemsSource="{Binding Cats}"
+                  Background="Transparent"
+                  RowHeight="150"
+                  ItemTapped="catsList_ItemTapped"
+                  ItemSelected="catsList_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="10">
-                            <Image Source="{Binding url}" HeightRequest="100" WidthRequest="200" Aspect="AspectFill" />
-                            <Label Text="{Binding id}" FontSize="Medium" />
+                        <StackLayout Orientation="Horizontal" Padding="15" Spacing="20">
+                            <Image Source="{Binding url}" WidthRequest="180" Aspect="AspectFill" />
+                            <Label Text="{Binding id}" FontSize="Large" VerticalOptions="Center"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>-->
-    <ListView x:Name="catsList" ItemsSource="{Binding Cats}"
-              Background="Transparent"
-              RowHeight="150"
-              ItemTapped="catsList_ItemTapped"
-              ItemSelected="catsList_ItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="15" Spacing="20">
-                        <Image Source="{Binding url}" WidthRequest="180" Aspect="AspectFill" />
-                        <Label Text="{Binding id}" FontSize="Large" VerticalOptions="Center"/>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-
-    <!--<CollectionView>
-        <CollectionView.ItemsSource>
-            <x:Array Type="{x:Type model:Cat}">
-                <model:Cat id="fw332" url="https://cdn2.thecatapi.com/images/alj.jpg" height="123" width="562"/>
-                <model:Cat id="2478" url="https://cdn2.thecatapi.com/images/coq.jpg" height="734" width="348"/>
-                <model:Cat id="h43" url="https://cdn2.thecatapi.com/images/ed6.jpg" height="2965" width="294"/>
-                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
-                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
-                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
-                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
-                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
-                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
-                <model:Cat id="duol75" url="https://cdn2.thecatapi.com/images/MTUyNzQ4MA.jpg" height="35" width="946"/>
-            </x:Array>
-        </CollectionView.ItemsSource>
-        <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="model:Cat">
-                <HorizontalStackLayout Padding="10" Spacing="20">
-                    <Image Source="{Binding url}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill"/>
-                    <Label Text="{Binding id}" FontSize="24" VerticalOptions="Center" />
-                    <Button x:Name="btnDetailsPage" Text="Details" Clicked="btnDetailsPage_Clicked"/>
-                </HorizontalStackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>-->
+    </StackLayout>
 
 </ContentPage>
