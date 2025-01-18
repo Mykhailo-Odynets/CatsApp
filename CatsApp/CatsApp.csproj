@@ -24,7 +24,7 @@
 		<ApplicationTitle>CatsApp</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.catsapp</ApplicationId>
+		<ApplicationId>com.modynets.catsapp</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
