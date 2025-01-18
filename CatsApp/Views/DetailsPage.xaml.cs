@@ -19,9 +19,7 @@ public partial class DetailsPage : ContentPage
         set
         {
             selectedCat = value;
-            string show1 = selectedCat?.breed?.name ?? "No breed, ";
-            string show2 = selectedCat?.category?.name ?? "No category";
-            DisplayAlert("Title", show1 + show2, "OK");
+            DisplayAlert("Info", $"{selectedCat?.breeds?.Count} breeds, {selectedCat?.categories?.Count} categories", "OK");
             OnPropertyChanged();
         }
     }

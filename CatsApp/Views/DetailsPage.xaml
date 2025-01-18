@@ -15,7 +15,7 @@
         <Label Text="{Binding SelectedCat.height}" FontSize="Large" />
     </StackLayout>-->
 
-    <ScrollView>
+    <!--<ScrollView>
         <StackLayout Padding="10" Spacing="10">
             <Image Source="{Binding SelectedCat.url}" HeightRequest="300" Aspect="AspectFill" />
             <Grid ColumnDefinitions="Auto, *" RowSpacing="10">
@@ -110,6 +110,130 @@
                 <Label Text="Category:" Grid.Column="0" Grid.Row="21" />
                 <Label Text="{Binding SelectedCat.category.name}" Grid.Column="1" Grid.Row="21" />
             </Grid>
+        </StackLayout>
+    </ScrollView>-->
+
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+            <Image Source="{Binding SelectedCat.url}" HeightRequest="300" Aspect="AspectFill" />
+            <Label Text="Info:" FontSize="Medium" />
+            <Grid ColumnDefinitions="Auto, *" RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Text="ID:" Grid.Column="0" Grid.Row="0" />
+                <Label Text="{Binding SelectedCat.id}" Grid.Column="1" Grid.Row="0" />
+
+                <Label Text="Width:" Grid.Column="0" Grid.Row="1" />
+                <Label Text="{Binding SelectedCat.width}" Grid.Column="1" Grid.Row="1" />
+
+                <Label Text="Height:" Grid.Column="0" Grid.Row="2" />
+                <Label Text="{Binding SelectedCat.height}" Grid.Column="1" Grid.Row="2" />
+            </Grid>
+
+            <Label Text="Breeds:" FontSize="Medium" />
+            <CollectionView ItemsSource="{Binding SelectedCat.breeds}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="Auto, *" RowSpacing="5" ColumnSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Name:" Grid.Column="0" Grid.Row="0" />
+                            <Label Text="{Binding name}" Grid.Column="1" Grid.Row="0" />
+
+                            <Label Text="Description:" Grid.Column="0" Grid.Row="1" />
+                            <Label Text="{Binding description}" Grid.Column="1" Grid.Row="1" />
+
+                            <Label Text="Weight:" Grid.Column="0" Grid.Row="2" />
+                            <Label Text="{Binding weight.metric}" Grid.Column="1" Grid.Row="2" />
+
+                            <Label Text="Temperament:" Grid.Column="0" Grid.Row="3" />
+                            <Label Text="{Binding temperament}" Grid.Column="1" Grid.Row="3" />
+
+                            <Label Text="Origin:" Grid.Column="0" Grid.Row="4" />
+                            <Label Text="{Binding origin}" Grid.Column="1" Grid.Row="4" />
+
+                            <Label Text="Life Span:" Grid.Column="0" Grid.Row="5" />
+                            <Label Text="{Binding life_span}" Grid.Column="1" Grid.Row="5" />
+
+                            <Label Text="Adaptability:" Grid.Column="0" Grid.Row="6" />
+                            <Label Text="{Binding adaptability}" Grid.Column="1" Grid.Row="6" />
+
+                            <Label Text="Affection Level:" Grid.Column="0" Grid.Row="7" />
+                            <Label Text="{Binding affection_level}" Grid.Column="1" Grid.Row="7" />
+
+                            <Label Text="Child Friendly:" Grid.Column="0" Grid.Row="8" />
+                            <Label Text="{Binding child_friendly}" Grid.Column="1" Grid.Row="8" />
+
+                            <Label Text="Dog Friendly:" Grid.Column="0" Grid.Row="9" />
+                            <Label Text="{Binding dog_friendly}" Grid.Column="1" Grid.Row="9" />
+
+                            <Label Text="Energy Level:" Grid.Column="0" Grid.Row="10" />
+                            <Label Text="{Binding energy_level}" Grid.Column="1" Grid.Row="10" />
+
+                            <Label Text="Grooming:" Grid.Column="0" Grid.Row="11" />
+                            <Label Text="{Binding grooming}" Grid.Column="1" Grid.Row="11" />
+
+                            <Label Text="Health Issues:" Grid.Column="0" Grid.Row="12" />
+                            <Label Text="{Binding health_issues}" Grid.Column="1" Grid.Row="12" />
+
+                            <Label Text="Intelligence:" Grid.Column="0" Grid.Row="13" />
+                            <Label Text="{Binding intelligence}" Grid.Column="1" Grid.Row="13" />
+
+                            <Label Text="Shedding Level:" Grid.Column="0" Grid.Row="14" />
+                            <Label Text="{Binding shedding_level}" Grid.Column="1" Grid.Row="14" />
+
+                            <Label Text="Social Needs:" Grid.Column="0" Grid.Row="15" />
+                            <Label Text="{Binding social_needs}" Grid.Column="1" Grid.Row="15" />
+
+                            <Label Text="Stranger Friendly:" Grid.Column="0" Grid.Row="16" />
+                            <Label Text="{Binding stranger_friendly}" Grid.Column="1" Grid.Row="16" />
+
+                            <Label Text="Vocalisation:" Grid.Column="0" Grid.Row="17" />
+                            <Label Text="{Binding vocalisation}" Grid.Column="1" Grid.Row="17" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Categories:" FontSize="Medium"/>
+            <CollectionView ItemsSource="{Binding SelectedCat.categories}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="Auto, *" RowSpacing="5" ColumnSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Name:" Grid.Column="0" Grid.Row="0" />
+                            <Label Text="{Binding name}" Grid.Column="1" Grid.Row="0" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ScrollView>
 
