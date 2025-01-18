@@ -5,7 +5,38 @@
              x:Class="CatsApp.Views.MainPage"
              Title="Cat Paradise">
 
-    <CollectionView>
+    <!--<StackLayout>
+        <ListView ItemsSource="{Binding Cats}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Image Source="{Binding url}" HeightRequest="100" WidthRequest="200" Aspect="AspectFill" />
+                            <Label Text="{Binding id}" FontSize="Medium" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>-->
+    <ListView x:Name="catsList" ItemsSource="{Binding Cats}"
+              Background="Transparent"
+              RowHeight="150"
+              ItemTapped="catsList_ItemTapped"
+              ItemSelected="catsList_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="15" Spacing="20">
+                        <Image Source="{Binding url}" WidthRequest="180" Aspect="AspectFill" />
+                        <Label Text="{Binding id}" FontSize="Large" VerticalOptions="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+    <!--<CollectionView>
         <CollectionView.ItemsSource>
             <x:Array Type="{x:Type model:Cat}">
                 <model:Cat id="fw332" url="https://cdn2.thecatapi.com/images/alj.jpg" height="123" width="562"/>
@@ -24,12 +55,11 @@
             <DataTemplate x:DataType="model:Cat">
                 <HorizontalStackLayout Padding="10" Spacing="20">
                     <Image Source="{Binding url}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill"/>
-                    <VerticalStackLayout VerticalOptions="Center">
-                        <Label Text="{Binding id}" FontSize="24" />
-                    </VerticalStackLayout>
+                    <Label Text="{Binding id}" FontSize="24" VerticalOptions="Center" />
+                    <Button x:Name="btnDetailsPage" Text="Details" Clicked="btnDetailsPage_Clicked"/>
                 </HorizontalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
-    </CollectionView>
+    </CollectionView>-->
 
 </ContentPage>

@@ -8,7 +8,7 @@ using System.Net.Http.Json;
 
 namespace CatsApp.Data
 {
-    class CatAPI
+    public class CatAPI
     {
         HttpClient client;
         List<Cat> cats = new List<Cat>();
