@@ -19,7 +19,7 @@ public partial class DetailsPage : ContentPage
         set
         {
             selectedCat = value;
-            DisplayAlert("Info", $"{selectedCat?.breeds?.Count} breeds, {selectedCat?.categories?.Count} categories", "OK");
+            //DisplayAlert("Info", $"{selectedCat?.breeds?.Count} breeds, {selectedCat?.categories?.Count} categories", "OK");
             OnPropertyChanged();
         }
     }
